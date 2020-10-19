@@ -1,23 +1,71 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+/* typography */
+body {
+  font-size: 18px;
+  line-height: 32px;
+  color: #7c858b;
+  font-family: 'Lato', sans-serif;
+}
+/* Layout */
+.container {
+ width: 1170px;
+ margin: 0 auto; 
+}
 .fixed-nav {
   position: fixed;
+  top: 0;
   z-index: 10;
 }
-/* Main Page Slide */
-.swiper-container {
-    width: 100%;
-    height: 100%;
-}
-
 
 /* nav */
-nav {
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0; right: 0; top: 0;
+  padding: 0 47px;
+  height: 120px;
+  z-index: 11;
+} 
+.header nav h1.logo a{
+  display: flex;
+}
+.header nav h1.logo img{
+  width: 100px;
+}
+.header nav h1.logo span{
+  font-size: 13px;
+  color: #fff;
+  margin-left: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 16px;
+}
+.header nav ul {
+  max-width: 1170px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.header nav ul li{
+  margin-left: 46px;
+}
+.header nav ul li a {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 .nav-button {
 
 }
 .nav-button .nav-icon {
   position: relative;
-  margin-top: ;
+  margin-top: 12px;
 }
 .nav-icon,
 .nav-icon::before,
@@ -25,7 +73,7 @@ nav {
   display: inline-block;
   width: 28px;
   height: 2px;
-  background-color: #333;
+  background-color: #fff;
 }
 .nav-button .nav-icon::before {
   top: -8px;
@@ -38,4 +86,63 @@ nav {
   content: "";
   position: absolute;
   left: 0;
+}
+
+/* Main Page Slide */
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+  padding-top: 300px;
+  background: no-repeat center center/cover;
+}
+.swiper-slide.slide1 {
+  background-image: url('../images/images_finish/slide01.jpg');
+}
+.swiper-slide.slide2 {
+  background-image: url('../images/images_finish/slide02.jpg');
+}
+.swiper-slide.slide3 {
+  background-image: url('../images/images_finish/slide03.jpg');
+}
+.swiper-button-next, .swiper-button-prev {
+right: auto;
+/* 우선 가운데로 위치를 모으고 */
+left: 50%;
+width: 89px;
+height: 36px;
+border-radius: 18px;
+background: #020405;
+transform: translateX(-50%);
+box-shadow: 2px 2px 3px rgba(0,0,0,.2);
+}
+/* margin-left를 이용해서 양쪽으로 위치를 벌려준다. (포토샵에서 위치확인) */
+.swiper-button-next {
+  margin-left: 629px;
+}
+.swiper-button-prev {
+  margin-left: -540px;
+}
+.swiper-button-next:after, 
+.swiper-button-prev:after {
+  content:'';
+}
+.big-arrow-left {
+  width: 27px;
+  height: 18px;
+  background-position: 0 -2px;
+}
+.big-arrow-right {
+  width: 27px;
+  height: 18px;
+  background-position: -37px -2px;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #ffba00;
+} 
+.swiper-button-prev:hover .big-arrow-left,
+.swiper-button-next:hover .big-arrow-right {
+  background-position-y: -25px !important;
 }

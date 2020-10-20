@@ -13,12 +13,34 @@ body {
  width: 1170px;
  margin: 0 auto; 
 }
+/* 풀페이지 nav */
 .fixed-nav {
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 0;
   z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  margin-left: 585px;
 }
-
+.fixed-nav a {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #879099;
+  box-sizing: border-box;
+  background: none;
+  text-indent: -9999em;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.fixed-nav a:last-child {
+  margin-bottom: 0;
+}
+.fixed-nav a.active {
+  background: #fff;
+  border: none;
+}
 /* nav */
 .header nav {
   display: flex;
@@ -46,6 +68,10 @@ body {
   margin-top: 16px;
 }
 .header nav ul {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); 
   max-width: 1170px;
   width: 100%;
   display: flex;
@@ -96,6 +122,14 @@ body {
 .swiper-slide {
   padding-top: 300px;
   background: no-repeat center center/cover;
+  z-index: 1;
+}
+.swiper-slide:after {
+  content: '';
+  position: absolute;
+  left: 0;right: 0;top: 0;bottom: 0;
+  background: rgba(0,0,0,.5);
+  z-index: -1;
 }
 .swiper-slide.slide1 {
   background-image: url('../images/images_finish/slide01.jpg');
@@ -145,4 +179,51 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 .swiper-button-prev:hover .big-arrow-left,
 .swiper-button-next:hover .big-arrow-right {
   background-position-y: -25px !important;
+}
+/* 스와이퍼슬라이드 페이저 */
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 54px;
+} 
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  background: none;
+  opacity: 1;
+  margin: 0 8px;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  border: none;
+  background: #fff;
+}
+
+.slogan {
+  margin-left: 100px;
+}
+.slogan h2 {
+  font-size: 92px;
+  line-height: 90px;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 900;
+}
+.slogan p {
+  color: #b1bfcc;
+  margin: 15px 0 38px;
+}
+/* .sm-arrow-right {
+  width: 21px;
+  height: 10px;
+  background-position: -74px -6px;
+} */
+.slogan span {
+  display: inline-block;
+  margin-left: 10px;
+}
+.fa-long-arrow-alt-right {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111c26;
 }

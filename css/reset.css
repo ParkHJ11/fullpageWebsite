@@ -62,23 +62,3 @@ button:focus {
   outline: none;
   cursor: pointer;
 }
-.sprite {
-	background: url(../images/images_finish/sprite.png) no-repeat;
-	text-indent: -9999em;
-	display: inline-block;
-}
-.btn {
-	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: 900;
-}
-.big {
-	padding: 0 37px;
-	line-height: 60px;
-	border-radius: 30px;
-}
-.orange {
-	background: #ffba00;
-	color: #111c26;
-}

@@ -1,6 +1,28 @@
 @import url(reset.css);
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
+/* Common.css  */
+.sprite {
+	background: url(../images/images_finish/sprite.png) no-repeat;
+	text-indent: -9999em;
+	display: inline-block;
+}
+.btn {
+	display: inline-block;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 900;
+}
+.big {
+	padding: 0 37px;
+	line-height: 60px;
+	border-radius: 30px;
+}
+.orange {
+	background: #ffba00;
+	color: #111c26;
+}
+
 /* typography */
 body {
   font-size: 18px;
@@ -226,4 +248,67 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   font-size: 20px;
   font-weight: 600;
   color: #111c26;
+}
+
+/*  story */
+.story > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.story .contents {
+  width: 868px;
+  text-align: center;
+}
+.story .contents h2 {
+  font-size: 65px;
+  font-weight: 900;
+  color: #0b131a;
+}
+.story .contents p {
+  margin: 27px 0 40px;
+}
+.title_bar {
+  position: relative;
+}
+.title_bar::before {
+  content: '';
+  position: absolute;
+  width: 91px;
+  height: 2px;
+  bottom: calc(100% + 40px);
+  background: #ffba00;
+}
+.title_bar.center::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title_bar.left::before {
+  left: 0;
+}
+.story .scroll_down {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  width: 36px;
+  height: 89px;
+  border-radius: 18px;
+  background: #fff;
+  border: 1px solid #ececed;
+  box-sizing: border-box;
+}
+.big_arrow_down {
+  position: absolute;
+  width: 12px;
+  height: 27px;
+  background-position: -25px -52px;
+  animation: clipani 1s infinite;
+}
+@keyframes clipani {
+  from {clip: rect(0, 12px, 0, 0);}
+  to {clip: rect(0, 12px, 27px, 0);}
 }

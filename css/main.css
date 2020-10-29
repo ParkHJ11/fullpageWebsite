@@ -22,6 +22,16 @@
 	background: #ffba00;
 	color: #111c26;
 }
+.section_tt {
+  margin-bottom: 12px;
+  font-size: 95px;
+  line-height: 90px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.contents p {
+  margin-bottom: 40px;
+}
 
 /* typography */
 body {
@@ -63,6 +73,11 @@ body {
   background: #fff;
   border: none;
 }
+.fixed-nav a.active-black {
+  background: #0b131a;
+  border: none;
+}
+
 /* nav */
 .header nav {
   display: flex;
@@ -187,12 +202,12 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 .big-arrow-left {
   width: 27px;
   height: 18px;
-  background-position: 0 -2px;
+  background-position: 0 0;
 }
 .big-arrow-right {
   width: 27px;
   height: 18px;
-  background-position: -37px -2px;
+  background-position: -32px 0;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
@@ -200,7 +215,7 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 } 
 .swiper-button-prev:hover .big-arrow-left,
 .swiper-button-next:hover .big-arrow-right {
-  background-position-y: -25px !important;
+  background-position-y: -26px !important;
 }
 /* 스와이퍼슬라이드 페이저 */
 .swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
@@ -303,12 +318,54 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 }
 .big_arrow_down {
   position: absolute;
-  width: 12px;
-  height: 27px;
-  background-position: -25px -52px;
+  width: 18px;
+  height: 29px;
+  background-position: -19px -47px;
   animation: clipani 1s infinite;
 }
 @keyframes clipani {
-  from {clip: rect(0, 12px, 0, 0);}
-  to {clip: rect(0, 12px, 27px, 0);}
+  from {clip: rect(0, 18px, 0, 0);}
+  to {clip: rect(0, 18px, 29px, 0);}
+}
+
+/* forest */
+.forest {
+  background: url(../images/images_finish/forest.jpg) no-repeat center center/cover;
+}
+.forest .contents {
+  width: 571px;
+  text-align: left;
+}
+.forest .contents h2 {
+  color: #ffffff;  
+}
+.forest .contents p {
+  color: #b1bfcc;
+}
+
+/* river */
+.road {
+  background: url(../images/images_finish/light.jpg) no-repeat center center/cover;
+  position: relative;
+  z-index: 1;
+}
+.road::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.4);
+  z-index: -1;
+}
+.road .contents {
+  width: 571px;
+  text-align: left;
+}
+.river .contents h2 {
+  color: #0b131a;
+}
+.river .contents p {
+  color: #7c858b;
 }

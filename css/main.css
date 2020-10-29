@@ -32,6 +32,18 @@
 .contents p {
   margin-bottom: 40px;
 }
+.bright-bg .section_tt {
+  color: #0b131a;
+}
+.dark-bg .section_tt {
+  color: #ffffff;
+}
+.bright-bg .contents p {
+  color: #7c858b;
+}
+.dark-bg .contents p {
+  color: #b1bfcc;
+}
 
 /* typography */
 body {
@@ -336,14 +348,14 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   width: 571px;
   text-align: left;
 }
-.forest .contents h2 {
-  color: #ffffff;  
-}
-.forest .contents p {
-  color: #b1bfcc;
-}
 
 /* river */
+.river .contents {
+  width: 571px;
+  text-align: left;
+}
+
+/* road */
 .road {
   background: url(../images/images_finish/light.jpg) no-repeat center center/cover;
   position: relative;
@@ -363,9 +375,80 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   width: 571px;
   text-align: left;
 }
-.river .contents h2 {
+
+/* footer */
+.footer {
+  padding: 86px 0 60px;
+}
+.footer_menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 78px;
+}
+.footer_menu li {
+  margin: 0 25px;
+}
+.footer_menu li a {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0b131a;
+  text-transform: uppercase;
+  /* 1000 = 1em */
+  letter-spacing: 0.1em;
+}
+.footer_menu li:hover a {
+  color: #ffba00;
+}
+.social_menu {
+  display: flex;
+  justify-content: center;
+}
+.social_menu li {
+  margin: 0 6px;
+}
+.social_menu li a {
+  display: block;
+  width: 47px;
+  height: 47px;
+  border-radius: 50%;
+  border: 1px solid #ececed;
+  text-align: center;
+  line-height: 47px;
+  background: #fff;
+  font-size: 16px;
   color: #0b131a;
 }
-.river .contents p {
-  color: #7c858b;
+.copyright {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
 }
+
+/* back_to_top */
+.back_to_top {
+  visibility: hidden;
+  position: fixed;
+  left: 50%;
+  bottom: 290px;
+  margin-left: 604px;
+  width: 36px;
+  height: 89px;
+  border-radius: 18px;
+  background: #ffba00;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+.back_to_top.active {
+  visibility: visible;
+  opacity: 1;
+}
+.big_arrow_up{
+  width: 18px;
+  height: 27px;
+  background-position: 0 -47px;
+}
+

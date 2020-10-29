@@ -16,6 +16,11 @@ $(document).ready(function () {
       } else {
         $('.fixed-nav').fadeOut();
       }
+      if (destination.index == 5) {
+        $('.back_to_top').addClass('active');
+      } else {
+        $('.back_to_top').removeClass('active');
+      }
     },
   });
 

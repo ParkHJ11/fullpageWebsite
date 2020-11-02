@@ -6,6 +6,9 @@ $(document).ready(function () {
       // destination의 인덱스번호가 0보다 크면(첫페이지가 아니면) 풀페이지nav를 표시
       if (destination.index > 0) {
         $('.fixed-nav').fadeIn();
+        $('.header nav').addClass('fixed');
+        $('.logo img').attr('src', 'images/images_finish/logoImage.png');
+
         if (destination.index == 1 || destination.index == 3) {
           $('.fixed-nav').find('a').removeClass('active');
           $('.fixed-nav').find('a').eq(destination.index).addClass('active-black');
@@ -15,6 +18,8 @@ $(document).ready(function () {
         }
       } else {
         $('.fixed-nav').fadeOut();
+        $('.header nav').removeClass('fixed');
+        $('.logo img').attr('src', 'images/images_finish/logo_white.png');
       }
       if (destination.index == 5) {
         $('.back_to_top').addClass('active');
@@ -41,7 +46,5 @@ $(document).ready(function () {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-
   });
-
-});
+}); // document ready

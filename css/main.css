@@ -100,6 +100,8 @@ body {
   padding: 0 47px;
   height: 120px;
   z-index: 11;
+  box-shadow: 0 3px 3px rgba(0,0,0,0);
+  transition: background 0.2s, box-shadow 0.2s;
 } 
 .header nav h1.logo a{
   display: flex;
@@ -135,8 +137,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-.nav-button {
 
+.nav-button {
+ width: 48px;
+ height: 48px;
+ text-align: center;
+ border-radius: 50%;
+ border: 1px solid rgba(255,255,255,.15);
 }
 .nav-button .nav-icon {
   position: relative;
@@ -146,7 +153,7 @@ body {
 .nav-icon::before,
 .nav-icon::after {
   display: inline-block;
-  width: 28px;
+  width: 22px;
   height: 2px;
   background-color: #fff;
 }
@@ -162,6 +169,26 @@ body {
   position: absolute;
   left: 0;
 }
+/* 스크롤이 생기면 nav에 클래스명 fixed추가 */
+.header nav.fixed {
+  background: #fff;
+  box-shadow: 0 3px 3px rgba(0,0,0,.01);
+}
+.header nav.fixed ul li a {
+  color: #0b131a;
+}
+.header nav.fixed ul li a:hover {
+  color: #ffba00;
+}
+header nav.fixed .nav-button {
+  border-color: #ececed;
+}
+nav.fixed .nav-icon,
+nav.fixed .nav-icon::before,
+nav.fixed .nav-icon::after {
+  background-color: #0b131a;
+}
+
 
 /* Main Page Slide */
 .swiper-container {

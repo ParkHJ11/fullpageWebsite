@@ -47,4 +47,12 @@ $(document).ready(function () {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  // toggle Menu Open & close
+  $('.nav-button').click(function () {
+    $('.toggle-menu').addClass('active');
+  });
+  $('.toggle-menu .close').click(function () {
+    $('.toggle-menu').removeClass('active');
+  });
 }); // document ready

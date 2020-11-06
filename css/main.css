@@ -125,6 +125,7 @@ body {
   transform: translate(-50%, -50%); 
   max-width: 1170px;
   width: 100%;
+  /* padding-right: 200px; */
   display: flex;
   justify-content: flex-end;
 }
@@ -521,3 +522,52 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   background-position: 0 -47px;
 }
 
+/* ------------------------- ABOUT ------------------------------ */
+.subpage-banner {
+  background: no-repeat center center/cover;
+  height: 480px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.subpage-banner::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,.5);
+  z-index: -1;
+}
+.subpage-banner.about {
+  background-image: url('../images/images_finish/banner-about.jpg');
+}
+.subpage-banner .contents {
+  text-align: center;
+  margin-top: 40px;
+}
+.subpage-banner h2 {
+  font-size: 95px;
+  line-height: 95px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+.subpage-banner p {
+  font-size: 18px;
+  color: #b1bfcc;
+  margin-bottom: 0;
+}
+.subpage .nav-button {
+  background: #ffba00;
+}
+.nav-icon,
+.nav-icon::before,
+.nav-icon::after {
+  background-color: #000;
+}

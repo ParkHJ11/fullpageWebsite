@@ -124,7 +124,7 @@ body {
   top: 50%;
   transform: translate(-50%, -50%); 
   max-width: 1170px;
-  width: 100%;
+  width: 70%;
   /* padding-right: 200px; */
   display: flex;
   justify-content: flex-end;

@@ -58,4 +58,15 @@ $(document).ready(function () {
   $('.toggle-menu .close').click(function () {
     $('.toggle-menu').removeClass('active');
   });
+
+  // subpage header fixed
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 0) {
+      $('.subpage nav').addClass('fixed');
+      $('.logo img').attr('src', '../images/images_finish/logoImage.png');
+    } else {
+      $('.subpage nav').removeClass('fixed');
+      $('.logo img').attr('src', '../images/images_finish/logo_white.png');
+    }
+  });
 }); // document ready

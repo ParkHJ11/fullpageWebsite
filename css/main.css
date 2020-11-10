@@ -571,3 +571,48 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 .nav-icon::after {
   background-color: #000;
 }
+
+.our-story {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-story > div {
+  width: 50%;
+  height: 700px;
+}
+.story-img, .do-img {
+  background: no-repeat center center/cover;
+  text-indent: -9999em;
+}
+.story-img {
+  background-image: url('../images/images_finish/forest.jpg');
+  order: 1;
+}
+.story-contents, .do-contents {
+  padding: 0 86px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.story-contents {
+  order: 2;
+}
+.do-img {
+  background-image: url('../images/images_finish/milky-way-5422901_1920.jpg');
+  order: 4;
+}
+.do-contents {
+  order: 3;
+}
+/* 아래 두 부분은 main페이지에서 준 스타일때문에 이렇게 해주는것
+ 실제로는 메인페이지만 따로 스타일주는게 맞음 */
+.our-story .contents {  
+  margin-top: 40px;
+}
+.our-story .contents h2 {
+  color: #0b131a;
+  font-size: 65px;
+}
+.our-story .contents p {
+  margin-bottom: 0;
+}

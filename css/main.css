@@ -238,12 +238,12 @@ nav.fixed .nav-icon::after {
     width: 100%;
     height: 100%;
 }
-.swiper-slide {
+.main-slides .swiper-slide {
   padding-top: 300px;
   background: no-repeat center center/cover;
   z-index: 1;
 }
-.swiper-slide:after {
+.main-slides .swiper-slide:after {
   content: '';
   position: absolute;
   left: 0;right: 0;top: 0;bottom: 0;
@@ -614,5 +614,36 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   font-size: 65px;
 }
 .our-story .contents p {
+  margin-bottom: 0;
+}
+
+/* peaple-says */
+.peaple-says {
+  background: #f9f9f9;
+}
+.peaple-says .contents {
+  width: 770px;
+  margin: 0 auto;
+  text-align: center;  
+}
+.testimonial-slides .swiper-slide {
+  padding: 225px 0 130px;
+}
+.testimonial-slides .contents h2 {
+  font-size: 65px;
+  color: #0b131a;
+  text-transform: uppercase;
+  line-height: 65px;
+  margin-bottom: 30px;
+}
+.reviewer h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #111c26;
+  margin: 27px 0 10px;
+}
+.reviewer p {
+  font-size: 16px;
+  color: #ffba00;
   margin-bottom: 0;
 }

@@ -44,6 +44,26 @@
 .dark-bg .contents p {
   color: #b1bfcc;
 }
+.title_bar {
+  position: relative;
+  padding-top:40px;
+}
+.title_bar::before {
+  content: '';
+  position: absolute;
+  width: 91px;
+  height: 2px;
+  /* bottom: 100%; */
+  top: 0;
+  background: #ffba00;
+}
+.title_bar.center::before {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.title_bar.left::before {
+  left: 0;
+}
 
 /* typography */
 body {
@@ -365,24 +385,7 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 .story .contents p {
   margin: 27px 0 40px;
 }
-.title_bar {
-  position: relative;
-}
-.title_bar::before {
-  content: '';
-  position: absolute;
-  width: 91px;
-  height: 2px;
-  bottom: calc(100% + 40px);
-  background: #ffba00;
-}
-.title_bar.center::before {
-  left: 50%;
-  transform: translateX(-50%);
-}
-.title_bar.left::before {
-  left: 0;
-}
+
 .story .scroll_down {
   position: absolute;
   display: flex;
@@ -547,7 +550,6 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 }
 .subpage-banner .contents {
   text-align: center;
-  margin-top: 40px;
 }
 .subpage-banner h2 {
   font-size: 95px;
@@ -604,11 +606,6 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 .do-contents {
   order: 3;
 }
-/* 아래 두 부분은 main페이지에서 준 스타일때문에 이렇게 해주는것
- 실제로는 메인페이지만 따로 스타일주는게 맞음 */
-.our-story .contents {  
-  margin-top: 40px;
-}
 .our-story .contents h2 {
   color: #0b131a;
   font-size: 65px;
@@ -627,7 +624,7 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   text-align: center;  
 }
 .testimonial-slides .swiper-slide {
-  padding: 225px 0 130px;
+  padding: 180px 0 130px;
 }
 .testimonial-slides .contents h2 {
   font-size: 65px;
@@ -728,4 +725,80 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
   color: #ffffff;
   text-transform: uppercase;
   font-weight: 900;
+}
+
+/* ----------------------- PORTFOLIO SINGLE----------------------- */
+.single-info {
+  padding: 125px 0 116px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.single-info .desc {
+  width: 500px;
+}
+.single-info h2 {
+  font-size: 65px;
+  color: #0b131a;
+  font-weight: 900;
+  text-transform: uppercase; 
+}
+.substate {
+  width: 570px;
+  padding: 63px 0 74px 70px;
+  background: #fbf9fb;
+}
+.substate dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+.substate dl dt {
+  width: 23%;
+  margin-bottom: 21px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: #0b131a;
+  font-weight: 700;
+}
+.substate dl dd {
+  width: 64%;
+  font-size: 16px;
+}
+.page_nav {
+  margin-top: 39px;
+  width: 177px;
+  height: 36px;
+  border-radius: 18px;
+  border: 1px solid #ececed;
+  box-sizing: border-box;
+  display: flex;
+}
+.page_nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.page_nav a.prev {
+  border-right: 1px solid #ececed;
+}
+.page_nav a span {
+  background-position-y: -26px;
+  opacity: 0.15;
+}
+.page_nav a:hover span {
+  opacity: 1;
+}
+.single-photos ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.single-photos ul li {
+  width: 33.333333%;
+  height: 700px;
+  background: no-repeat center center/cover;
+  text-indent: -9999em;
+}
+.single-photos ul li.double {
+  width: 66.666666%;
 }

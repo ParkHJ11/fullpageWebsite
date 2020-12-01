@@ -72,6 +72,9 @@ body {
   color: #7c858b;
   font-family: 'Lato', sans-serif;
 }
+textarea {
+  font-family: 'Lato', sans-serif;
+}
 /* Layout */
 .container {
  width: 1170px;
@@ -801,4 +804,85 @@ box-shadow: 2px 2px 3px rgba(0,0,0,.2);
 }
 .single-photos ul li.double {
   width: 66.666666%;
+}
+
+/* ----------------------- CONTACT ----------------------- */
+.contact-contents {
+  display: flex;
+}
+.contact-contents > div {
+  flex: 1;
+}
+.contact-contents .form {
+  padding-top: 127px;
+}
+.contact-contents .form form {
+  width: 500px;
+  /* 정해진공간안에서 오른쪽으로 치우치도록 */
+  margin-left: auto;
+  padding-right: 86px;
+}
+.contact-contents .map {
+  height: 700px;
+  background: #bdcbd9;
+}
+.contact-contents form h2 {
+  font-size: 27px;
+  color: #0b131a;
+  font-weight: 900;
+  margin-bottom: 34px;
+  padding-top: 30px;
+  text-transform: uppercase;
+}
+.contact-contents .field {
+  margin-bottom: 18px;
+  position: relative;
+  
+}
+.contact-contents .field label {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0b131a;
+  opacity: 0;
+  visibility: hidden;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px;
+  transition: 0.4s;
+}
+.contact-contents .field label.active {
+  top: 0px;
+  opacity: 1;
+  visibility: visible;
+}
+.contact-contents .field input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border: none;
+  /* padding-left: 15px;
+  box-sizing: border-box; */
+  border-bottom: 1px solid #ececed;
+  color: #0b131a;
+  font-size: 16px;
+}
+.contact-contents .field input::placeholder,
+.contact-contents .field textarea::placeholder {
+  color: rgba(11,19,26,0.5);
+  font-size: 16px;
+}
+.contact-contents .field textarea {
+  /* font-family: 'Lato', sans-serif; */
+  color: #0b131a;
+  font-size: 16px;
+  border:none;
+  width: 100%;
+  border-bottom: 1px solid #ececed;
+}
+.contact-contents input:focus,
+.contact-contents textarea:focus {
+  border-bottom-color: #0b131a;
 }

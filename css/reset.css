@@ -62,3 +62,6 @@ button:focus {
   outline: none;
   cursor: pointer;
 }
+textarea, input {
+	outline: none;
+}

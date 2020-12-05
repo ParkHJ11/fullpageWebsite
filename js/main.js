@@ -96,4 +96,14 @@ $(document).ready(function () {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 500, 'easeOutQuint');
   });
+
+  // contact form
+  if ($('.contact-contents').length) {
+    var formInput = $('.contact-contents form input');
+    formInput.click(function () {
+      $(this).prev().addClass('active');
+      // placeholder속성의 값을 ''빈값으로
+      $(this).attr('placeholder', '');
+    });
+  } // contact form
 }); // document ready

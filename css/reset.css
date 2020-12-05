@@ -52,7 +52,7 @@ img {
 a {
   text-decoration: none;
 }
-button, 
+/* button, 
 button:active, 
 button:hover,
 button:focus {
@@ -61,7 +61,19 @@ button:focus {
   appearance: none;
   outline: none;
   cursor: pointer;
-}
+} */
 textarea, input {
 	outline: none;
+}
+button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+input {
+	background: none;
+	border: none;
+}
+textarea {
+	resize: none;
 }
